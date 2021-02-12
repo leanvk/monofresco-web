@@ -7,6 +7,7 @@ export const colors={
     blue:'#356BFF',
     deepBlue: '#02327A',
     bg:'#F0F0F0',
+    hoverBlue:'#2554D3',
   
   };
 

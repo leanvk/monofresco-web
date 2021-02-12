@@ -1,5 +1,5 @@
 
-import UnderConstruction from './Under constrution page/under-construction';
+
 import Footer from './footer/footer.js';
 import Header from './header/header.js';
 import Hero from './hero/hero.js'

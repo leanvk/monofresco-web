@@ -2,7 +2,8 @@ import styled from "styled-components";
 import colors from "../colors";
 import DotStain from "./../svg/dotStain";
 import { Logo } from "./../svg/logo";
-
+import { Frame } from "./../svg/frame";
+//
 export const Container = styled.section.attrs((props) => ({
   height: props.height || "150px",
   width: props.width || "100%",
@@ -14,7 +15,7 @@ export const Container = styled.section.attrs((props) => ({
   justify-content: center;
   align-items: center;
 `;
-
+//
 export const Bg = styled.div`
   box-sizing: border-box;
   background-color: ${colors.yellow};
@@ -22,54 +23,101 @@ export const Bg = styled.div`
   height: 39vh;
   position: relative;
   display: flex;
- 
 `;
-
+//
 export const Dot1 = styled(DotStain)`
   position: absolute;
-  
-  top: -60%;
+
+  top: -23%;
   right: -4%;
   transform: scale(3);
+  z-index: 2;
+  opacity: 0.6;
 `;
 
 export const Dot2 = styled(DotStain)`
   position: absolute;
-  bottom: -60%;
+  bottom: -20%;
   left: -5%;
   transform: scale(3.5);
-  z-index: 0;
+  z-index: -40;
+  opacity: 0.6;
 `;
-
+//
 export const LogoWrapper = styled(Logo)`
   fill: ${colors.green};
   position: absolute;
   bottom: 3%;
   right: 1%;
 `;
-
+//
 export const TextWrapper = styled.div`
-  content: "";
+  background: transparent;
+  position: absolute;
+  top: 1em;
+  bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 34%;
+  left: -8%;
+  margin: none;
+  padding: none;
+`;
+
+export const TextHeader = styled.h1`
+  font-family: Montserrat;
+  font-weight: 900;
+  font-size: 4em;
+  line-height: 1.15em;
+  text-align: left;
+  color: ${colors.green};
+  width: 6em;
+  margin: 0em;
 `;
 
 export const Button = styled.button`
-  content: "";
-  position: absolute;
-  width: 150px;
-height: 50px;
-background: ${colors.blue};
-border-radius:0;
-border:none;
+  box-sizing: border-box;
+  width: 13em;
+  height: 2.5em;
+  background: ${colors.blue};
+  border-radius: 0;
+  border: none;
 
-font-family: Montserrat;
-font-weight: 300;
-font-size: 20px;
-letter-spacing: -0.01em;
+  font-family: Montserrat;
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: -0.01em;
 
-text-align: center;
-color: ${colors.withe};
+  text-align: center;
+  color: ${colors.withe};
+  margin: 1em;
+  padding: 0.7em;
+  transition: 0.09s ease-in-out;
 
-
+  &:hover {
+    transform: scale(1.05);
+    background: ${colors.hoverBlue};
+    transition: 0.09s ease-in-out;
+  }
 `;
 
-export const ImgWrapper = styled.div``;
+
+
+export const HeroWrapper = styled.div`
+  
+`;
+export const FrameWrapper = styled(Frame)`
+  
+`;
+
+export const TextFrame = styled.h2`
+  
+`;
+
+export const ImgWrapper = styled.img`
+  
+`;
+
+
