@@ -9,9 +9,7 @@ import {
   LogoWrapper,
   TextHeader,
   HeroWrapper,
-  FrameWrapper,
-  TextFrame,
-  ImgWrapper,
+ 
 } from "./hero-elements";
 import colors from "../colors";
 
@@ -25,15 +23,12 @@ export const Hero = () => {
         </TextWrapper>
 
         <HeroWrapper>
-          <FrameWrapper>
-            <TextFrame> Adios Universidad</TextFrame>
-          </FrameWrapper>
-          <ImgWrapper></ImgWrapper>
+          
         </HeroWrapper>
         <Dot1></Dot1>
 
         <Dot2></Dot2>
-        <LogoWrapper fill={colors.green} width="50px"></LogoWrapper>
+        <LogoWrapper fill={colors.green} width="75px"></LogoWrapper>
       </Bg>
     </Container>
   );

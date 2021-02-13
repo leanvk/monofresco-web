@@ -2,7 +2,8 @@ import styled from "styled-components";
 import colors from "../colors";
 import DotStain from "./../svg/dotStain";
 import { Logo } from "./../svg/logo";
-import { Frame } from "./../svg/frame";
+
+import { ReactComponent as hero } from "./../svg/hero.svg";
 //
 export const Container = styled.section.attrs((props) => ({
   height: props.height || "150px",
@@ -23,13 +24,17 @@ export const Bg = styled.div`
   height: 39vh;
   position: relative;
   display: flex;
+  justify-content:center;
+  align-Items:center;
+  max-width:1047px;
+  max-height:300px;
 `;
 //
 export const Dot1 = styled(DotStain)`
   position: absolute;
 
   top: -23%;
-  right: -4%;
+  right: 0%;
   transform: scale(3);
   z-index: 2;
   opacity: 0.6;
@@ -95,6 +100,7 @@ export const Button = styled.button`
   margin: 1em;
   padding: 0.7em;
   transition: 0.09s ease-in-out;
+  cursor: pointer;
 
   &:hover {
     transform: scale(1.05);
@@ -103,21 +109,23 @@ export const Button = styled.button`
   }
 `;
 
+export const HeroWrapper = styled(hero)`
+
+    height:200%;
+    margin:none;
+    margin-left:12%;
 
 
-export const HeroWrapper = styled.div`
-  
-`;
-export const FrameWrapper = styled(Frame)`
-  
-`;
+    #Component_2_1{
+      transition: 0.09s ease-in-out;
+      transform-origin: -400% center;
+      &:hover {
+    transform: scale(1.05);
 
-export const TextFrame = styled.h2`
   
-`;
-
-export const ImgWrapper = styled.img`
-  
+    transition: 0.09s ease-in-out;
+  }
+    }
 `;
 
 

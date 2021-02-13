@@ -65,9 +65,9 @@ export const LineDivider = styled.span`
 export const LogoWrapper = styled.div``;
 
 export const LogoBox = styled.div`
-  width: 4em;
   height: 4em;
   border-radius: 4px;
+  width: 4em;
   background: ${colors.grey};
   display: flex;
   justify-content: center;
