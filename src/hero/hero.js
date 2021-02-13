@@ -15,7 +15,7 @@ import colors from "../colors";
 
 export const Hero = () => {
   return (
-    <Container width="100%" height="90vh">
+    <Container width="100vw" height="90vh">
       <Bg>
         <TextWrapper>
           <TextHeader>Carteles con mucha Onda!!!</TextHeader>

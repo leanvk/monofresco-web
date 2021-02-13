@@ -47,5 +47,11 @@ export const ListEntry= styled.li`
 padding-left: 2%;
 padding-right: 2%;
 cursor: pointer;
+transition: 0.3s ease-in-out;
+
+&:hover{
+  color:  ${colors.yellow};
+  transition: 0.09s ease-in-out;
+}
 
 `

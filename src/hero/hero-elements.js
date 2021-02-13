@@ -24,7 +24,7 @@ export const Bg = styled.div`
   height: 39vh;
   position: relative;
   display: flex;
-  justify-content:center;
+  justify-content:space-between;
   align-Items:center;
   max-width:1047px;
   max-height:300px;
@@ -49,26 +49,22 @@ export const Dot2 = styled(DotStain)`
   opacity: 0.6;
 `;
 //
-export const LogoWrapper = styled(Logo)`
-  fill: ${colors.green};
-  position: absolute;
-  bottom: 3%;
-  right: 1%;
-`;
+
 //
 export const TextWrapper = styled.div`
   background: transparent;
-  position: absolute;
-  top: 1em;
-  bottom: 1em;
+  //position: absolute;
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 34%;
-  left: -8%;
-  margin: none;
-  padding: none;
+  margin:none;
+  margin-left: -10%;
+  margin-bottom: -8%;
+
+
+
 `;
 
 export const TextHeader = styled.h1`
@@ -101,11 +97,12 @@ export const Button = styled.button`
   padding: 0.7em;
   transition: 0.09s ease-in-out;
   cursor: pointer;
+  
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     background: ${colors.hoverBlue};
-    transition: 0.09s ease-in-out;
+    transition: 0.2s ease-in-out;
   }
 `;
 
@@ -113,19 +110,27 @@ export const HeroWrapper = styled(hero)`
 
     height:200%;
     margin:none;
-    margin-left:12%;
+    margin-left:-4%;
 
 
     #Component_2_1{
-      transition: 0.09s ease-in-out;
+      transition: 0.5s ease-in-out;
       transform-origin: -400% center;
       &:hover {
     transform: scale(1.05);
 
   
-    transition: 0.09s ease-in-out;
+    transition: 0.2s ease-in-out;
   }
     }
 `;
 
 
+export const LogoWrapper = styled(Logo)`
+  fill: ${colors.green};
+  align-self: flex-end;
+  margin:none;
+  margin-bottom:1%;
+  margin-right:1%;
+  
+`;

@@ -24,10 +24,10 @@ export const Footer = () => {
         <RightWrapper>
           <Text>Seguinos</Text>
           <LogoBox>
-            <a href='https://www.instagram.com/monofresco.carteles/' target='_blank'><IGlogo></IGlogo></a>
+            <a href='https://www.instagram.com/monofresco.carteles/' target='_blank' rel="noreferrer"><IGlogo></IGlogo></a>
           </LogoBox>
           <LogoBox>
-          <a href='https://listado.mercadolibre.com.ar/monofresco#D[A:monofresco]'target='_blank'><MlLogo width="41px" height=" 28px"></MlLogo></a>
+          <a href='https://listado.mercadolibre.com.ar/monofresco#D[A:monofresco]'target='_blank' rel="noreferrer"><MlLogo width="41px" height=" 28px"></MlLogo></a>
           </LogoBox>
         </RightWrapper>
       </IconsWrapper>
