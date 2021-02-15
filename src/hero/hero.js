@@ -9,6 +9,7 @@ import {
   LogoWrapper,
   TextHeader,
   HeroWrapper,
+  Button2,
  
 } from "./hero-elements";
 import colors from "../colors";
@@ -29,6 +30,7 @@ export const Hero = () => {
 
         <Dot2></Dot2>
         <LogoWrapper fill={colors.green} width="75px"></LogoWrapper>
+        <Button2>Ver modelos</Button2>
       </Bg>
     </Container>
   );

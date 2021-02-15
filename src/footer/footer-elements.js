@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import colors from "./../colors";
 import { RiInstagramLine } from "react-icons/ri";
+import { device } from "./../device";
 
 export const Container = styled.section.attrs((props) => ({
-  height: props.height || "150px",
+  height: props.height || "170px",
   width: props.width || "100%",
 }))`
   background-color: ${colors.black};
@@ -17,11 +18,25 @@ export const Container = styled.section.attrs((props) => ({
   justify-content: center;
   align-items: space-between;
   padding-top: 20px;
+  overflow: hidden;
+  @media ${device.mobileL} {
+    height: 100%;
+    padding-left: 4%;
+  padding-right: 4%;
+  padding-top: 1%;
+  margin:none;
+  padding:none;
+  }
 `;
 
 export const IconsWrapper = styled.section`
   display: flex;
   justify-content: space-between;
+  @media ${device.mobileL} {
+    margin:auto;
+    transform: scale(0.5);
+    margin-top: -3%;
+  }
 `;
 export const LeftWrapper = styled.section`
   display: flex;
@@ -29,17 +44,21 @@ export const LeftWrapper = styled.section`
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+
+  
 `;
 export const RightWrapper = styled.section`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 299px;
+  box-sizing:border-box;
+ 
 `;
 export const Text = styled.p`
   font-family: "Source Sans Pro";
   font-weight: normal;
   font-size: 16px;
- 
+
   text-align: left;
   color: ${colors.grey};
 `;
@@ -51,6 +70,13 @@ export const Copyright = styled.section`
   line-height: 28px;
   text-align: left;
   color: ${colors.grey};
+  @media ${device.mobileL}{
+    text-align: center;
+    margin-top: -14%;
+    margin-bottom: -4%;
+    font-size: 8px;
+
+  }
 `;
 
 export const LineDivider = styled.span`
@@ -61,6 +87,13 @@ export const LineDivider = styled.span`
   border-radius: 1px;
   margin-top: 20px;
   display: inline;
+  @media ${device.mobileL} {
+    visibility: hidden;
+    height: none;
+    width: none;
+    margin:none;
+    padding:none;
+  }
 `;
 export const LogoWrapper = styled.div``;
 

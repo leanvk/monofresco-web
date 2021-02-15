@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import colors from "../colors";
-
+import {device} from './../device';
 
 export const Container = styled.section.attrs((props) => ({
-    height: props.height || "150px",
+    
     width: props.width || "100%",
   }))`
     background-color: ${colors.black};
@@ -15,6 +15,13 @@ export const Container = styled.section.attrs((props) => ({
     box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
+    overflow:hidden;
+
+    @media ${device.mobileL}{
+      justify-content: center;
+      height:80%;
+    }
+
   `;
 
 
@@ -24,7 +31,10 @@ font-weight: normal;
 font-size: 25px;
 text-align: center ;
 color: ${colors.withe};
-
+display:flex;
+@media ${device.mobileL}{
+  font-size: 12px;
+    }
 `
 
 export const ListWrapper= styled.ul`
@@ -38,7 +48,9 @@ line-height: 28px;
 text-align: center;
 color:  ${colors.withe};
 display: flex;
-
+@media ${device.mobileL}{
+    visibility:hidden;  
+    }
 
 `
 
@@ -53,5 +65,9 @@ transition: 0.3s ease-in-out;
   color:  ${colors.yellow};
   transition: 0.09s ease-in-out;
 }
-
+@media ${device.mobileL}{
+    visibility:hidden;  
+    height:0;
+    width:0;
+    }
 `

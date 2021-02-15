@@ -4,7 +4,7 @@ import { Container, Text, ListWrapper, ListEntry,  } from "./header-elements";
 export const Header = () => {
   return (
   
-  <Container width="100vw" height="100%">
+  <Container width="100vw" >
 
     <Text>Monofresco</Text>
 

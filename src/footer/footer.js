@@ -16,7 +16,7 @@ import MlLogo from "./../svg/ml.js";
 
 export const Footer = () => {
   return (
-    <Container width="100vw" height="170px">
+    <Container width="100vw" >
       <IconsWrapper>
         <LeftWrapper>
           <Logo width="53px" height=" 66px"></Logo>{" "}
