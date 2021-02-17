@@ -33,6 +33,11 @@ export const Bg = styled.div`
   margin-right:10%;
 
   @media ${device.mobileL} {
+
+    margin-right:0%;
+  justify-content: center;
+  width: 65vw;
+  height: 75vh;
   }
 `;
 
@@ -52,19 +57,31 @@ export const LogoCircle = styled.div`
   min-height:33vw;
     max-width:33vw;
   max-height:33vw;
-  margin-left:-15%
+  margin-left:-15%;
+  @media ${device.mobileL} { 
+    position:absolute;
+    visibility:hidden;
+    right:-1000%;
+  }
 `;
 export const LogoWrapper = styled(Logo)`
   fill: ${colors.black};
   display:flex;
-  min-width:20vw;
-  min-height:20vw;
-    max-width:20vw;
-  max-height:20vw;
+  min-width:17vw;
+  min-height:17vw;
+    max-width:17vw;
+  max-height:17vw;
+  
+
 `;
 
 export const FormWrapper = styled.div`
  margin-left:12%;
+ @media ${device.mobileL} {
+
+margin-left:0%;
+}
+
 `;
 
 export const TextHeader = styled.h1`
@@ -79,6 +96,11 @@ export const TextHeader = styled.h1`
     -webkit-align-self: flex-end;
     -ms-flex-item-align: end;
     align-self: flex-end;
+    @media ${device.mobileL} {
+
+      text-align: center;
+      margin-bottom:14%;
+}
 `;
 
 export const Form = styled.form`
@@ -86,6 +108,8 @@ export const Form = styled.form`
 justify-content: space-between;
 align-items: center;
 flex-direction:column;
+
+
 `;
 
 export const InputText = styled.input.attrs((props) => ({
@@ -101,7 +125,10 @@ border:none;
 text-align: right;
 font-family: Montserrat; 
     font-weight: 200;
-
+    @media ${device.mobileL} {
+      width:60%;
+      
+}
 
 `;
 
@@ -116,7 +143,9 @@ text-align: right;
 font-family: Montserrat; 
     font-weight: 200;
     resize: none;
-
+    @media ${device.mobileL} {
+      width:60%;
+}
 `;
 
 export const InputSubmit = styled.input`
@@ -138,5 +167,11 @@ box-sizing: border-box;
   padding: 0.7em;
   transition: 0.09s ease-in-out;
   cursor: pointer;
+
+  @media ${device.mobileL} { 
+    margin-top: 14%;
+    transform:scale(0.75)
+
+  }
 
 `;
