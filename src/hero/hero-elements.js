@@ -18,6 +18,7 @@ export const Container = styled.section.attrs((props) => ({
   align-items: center;
   margin:none;
   overflow:hidden;
+  background-color:${colors.bg};
 `;
 //
 export const Bg = styled.div`
