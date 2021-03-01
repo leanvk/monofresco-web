@@ -18,7 +18,7 @@ export const FormSection = () => {
             <InputText type="text" placeholder="email"/>
             <InputText type="text" placeholder="modelo"/>
             <Textarea placeholder="Cuentanos como quieres tu cartel"></Textarea>  
-            <InputSubmit type="submit"/>
+            <InputSubmit type="submit" onClick={e=>e.preventDefault}/>
           </Form>
         </FormWrapper>
       </Bg>

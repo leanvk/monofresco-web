@@ -5,7 +5,7 @@ import Header from './header/header.js';
 import Hero from './hero/hero.js';
 import FormSection from './form/form.js';
 import Examples from './examples/examples.js';
-
+import AboutUs  from './svg/aboutUs';
 
 
 
@@ -17,6 +17,7 @@ function App() {
       <Hero></Hero>
       <Examples></Examples>
       <FormSection></FormSection>
+      <AboutUs></AboutUs>
       <Footer></Footer>
 
     </>

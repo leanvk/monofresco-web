@@ -34,13 +34,20 @@ export const Bg = styled.div`
 
   @media ${device.mobileL} {
 
-    margin-right:0%;
+  margin-right:0%;
   justify-content: center;
   width: 65vw;
   height: 75vh;
   }
-`;
+  @media ${device.mobileM} {
 
+margin-right:0%;
+justify-content: center;
+width: 65vw;
+height: 71vh;
+}
+`;
+const circleDiameter= '29vw';
 export const LogoCircle = styled.div`
   display: flex;
   align-items: center;
@@ -53,10 +60,10 @@ export const LogoCircle = styled.div`
   
   border: none;
   position:relative;
-  min-width:33vw;
-  min-height:33vw;
-    max-width:33vw;
-  max-height:33vw;
+  min-width:${circleDiameter};
+  min-height:${circleDiameter};;
+    max-width:${circleDiameter};;
+  max-height:${circleDiameter};;
   margin-left:-15%;
   @media ${device.mobileL} { 
     position:absolute;
@@ -101,6 +108,11 @@ export const TextHeader = styled.h1`
       text-align: center;
       margin-bottom:14%;
 }
+@media ${device.mobileS} { 
+    
+  font-size: 2.6em;
+  margin-bottom:5%;
+  }
 `;
 
 export const Form = styled.form`
@@ -108,7 +120,11 @@ export const Form = styled.form`
 justify-content: space-between;
 align-items: center;
 flex-direction:column;
-
+@media ${device.mobileS} { 
+    
+  
+    margin-bottom:-15%;
+    }
 
 `;
 
@@ -129,7 +145,14 @@ font-family: Montserrat;
       width:60%;
       
 }
+@media ${device.mobileM} {
+      width:55%;
+      
+}
+@media ${device.mobileS} {
 
+  width:50%;
+}
 `;
 
 export const Textarea = styled.textarea`
@@ -145,6 +168,14 @@ font-family: Montserrat;
     resize: none;
     @media ${device.mobileL} {
       width:60%;
+}
+@media ${device.mobileM} {
+      width:55%;
+      
+}
+@media ${device.mobileS} {
+
+width:50%;
 }
 `;
 
@@ -169,9 +200,19 @@ box-sizing: border-box;
   cursor: pointer;
 
   @media ${device.mobileL} { 
-    margin-top: 14%;
-    transform:scale(0.75)
+    margin-top: 21%;
+    transform:scale(.9)
 
   }
+  @media ${device.mobileM} { 
+    margin-top: 14%;
+    transform: scale(0.85);
 
+  }
+  @media ${device.mobileS} { 
+    margin-top: 14%;
+    transform: scale(0.75);
+
+  }
+ 
 `;

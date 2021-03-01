@@ -1,10 +1,10 @@
 const size = {
-    mobileS: '320px',
-    mobileM: '375px',
-    mobileL: '426px',
-    tablet: '768px',
-    laptop: '1024px',
-    laptopL: '1440px',
+    mobileS: '321px',
+    mobileM: '376px',
+    mobileL: '427px',
+    tablet: '769px',
+    laptop: '1025px',
+    laptopL: '1441px',
     desktop: '2560px'
   };
 

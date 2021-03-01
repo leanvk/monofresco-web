@@ -76,8 +76,8 @@ export const Dot2 = styled(DotStain)`
     position: absolute;
   bottom: -20%;
   left: -5%;
-  transform: scale(7);
-  z-index: -40;
+  transform: scale(6);
+  z-index: 0;
   opacity: 0.6;
   }
 `;
@@ -180,8 +180,8 @@ export const Button2 = styled.button`
   @media ${device.mobileL} { 
 
     box-sizing: border-box;
-  width: 13em;
-  height: 2.5em;
+  width: 17em;
+  height: 3em;
   background: ${colors.blue};
   border-radius: 0;
   border: none;
@@ -225,6 +225,7 @@ export const HeroWrapper = styled(hero)`
     margin:none;
     margin-left:-4%;
     box-sizing:border-box;
+    z-index:99;
 
 
     #Component_2_1{
@@ -242,7 +243,26 @@ export const HeroWrapper = styled(hero)`
      // transform: scale(1.65);
      position: absolute;
     top: -13%;
-    left: 8%;
+    left: 18%;
+    height: 127%;
+    box-sizing: border-box;
+    
+}
+
+@media ${device.mobileM} {
+     // transform: scale(1.65);
+     position: absolute;
+    top: -13%;
+    left: 15%;
+    height: 127%;
+    box-sizing: border-box;
+    
+}
+@media ${device.mobileM} {
+     // transform: scale(1.65);
+     position: absolute;
+    top: -13%;
+    left: 7%;
     height: 127%;
     box-sizing: border-box;
     

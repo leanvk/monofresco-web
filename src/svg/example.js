@@ -20,12 +20,11 @@ import Arquitecta from "./../img/img (13).jpg";
 import LicComercio from "./../img/img (14).jpg";
 import Veterinaria from "./../img/img (15).jpg";
 import Economista from "./../img/img (16).jpg";
-import styled from 'styled-components';
-import { FaGreaterThan } from "react-icons/fa";
-
-import { FaLessThan } from "react-icons/fa";
 
 import colors from "./../colors";
+
+
+
 
 
 const imgArray = [
@@ -54,38 +53,26 @@ const nameArray = [
   'Jura a la bandera',
   'Diseñadora',
   'Arquitecto',
-  'Diseñadora Industrial',
+  'Dis. Industrial',
   'Ciencias Politicas',
   'Administrador',
   'Terapeuta',
   'Arquitecto',
   'Farmaceutica',
-  'Lic.Turismo',
+  'Lic. Turismo',
   'Psicologia',
   'Arquitecta',
-  'LicComercio',
+  'Lic. Comercio',
   'Veterinaria',
   'Economista',
 ];
 
-const btnSize= '2em'
-
-const Btn= styled.button`
-font-size:20px;
-color:${colors.withe};
-background-color:${colors.green};
-max-height:${btnSize};
-max-width:${btnSize};
-min-height:${btnSize};
-min-width:${btnSize};
-border-radius:50%;
-border:none;
-z-index:99;
-
-position: absolute;
 
 
-`
+//position: absolute;
+
+
+
 
 
 function SvgComponent(props) {
@@ -104,17 +91,16 @@ function SvgComponent(props) {
   return (
     <>
 
-<Btn onClick={handleClickMinus}>{FaLessThan}</Btn>
-      <Btn onClick={handleClickplus}>{FaGreaterThan}</Btn>
      
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
         width={1161.063}
         height={890.533}
-        viewBox="0 0 1161.063 890.533"
+        viewBox="0 0 1500 1000"
         {...props}
-        style={{ transition: "0.2s ease-in-out" }}
+      
+       
       >
   
         <defs>
@@ -140,6 +126,8 @@ function SvgComponent(props) {
             height={399.925}
             transform="rotate(-5.13 861.778 -275.424)"
             href={imgRight}
+            
+            
           />
           <g data-name="Group 12">
             <g data-name="Group 7">
@@ -162,14 +150,16 @@ function SvgComponent(props) {
               </g>
             </g>
             <text
-              data-name="Jura a la bandera"
-              transform="rotate(-5.13 5962.334 -2692.525)"
-              fill="#4d4e4e"
-              fontSize={44}
-              fontFamily="Bariol-Bold, Bariol"
-              fontWeight={700}
+               data-name="Psicolog\xEDa"
+               transform="rotate(-5.13 6810.657 -3198.292)"
+               fill="#4d4e4e"
+               fontSize={49}
+               fontFamily="Bariol-Bold, Bariol"
+               fontWeight={700}
+               transform-origin='-5% 35%'
+               text-anchor="middle"
             >
-              <tspan x={-149.182} y={0}>
+              <tspan id='left-text'x={-15} y={-80}>
                 {nameArray[index+1]}
               </tspan>
             </text>
@@ -182,6 +172,8 @@ function SvgComponent(props) {
             height={408.681}
             transform="rotate(-5.13 854.826 -207.71)"
             href={imgLeft}
+            className='img'
+            class="img"
           />
           <g data-name="Group 12">
             <g data-name="Group 7">
@@ -205,14 +197,16 @@ function SvgComponent(props) {
               </g>
             </g>
             <text
-              data-name="Educaci\xF3n f\xEDsica"
-              transform="rotate(-5.13 6118.205 -2841.715)"
+              data-name="Psicolog\xEDa"
+              transform="rotate(-5.13 6810.657 -3198.292)"
               fill="#4d4e4e"
-              fontSize={45}
+              fontSize={49}
               fontFamily="Bariol-Bold, Bariol"
               fontWeight={700}
+              transform-origin='0% 25%'
+              text-anchor="middle"
             >
-              <tspan x={-144.158} y={0}>
+              <tspan id='right-text'x={-15} y={-80} >
                 {nameArray[index-1]}
               </tspan>
             </text>
@@ -228,6 +222,8 @@ function SvgComponent(props) {
             height={451.406}
             transform="rotate(-5.13 1026.918 -311.475)"
             href={imgCentral}
+            className='img'
+            class="img"
           />
           <g data-name="Group 22">
             <g data-name="Group 7">
@@ -254,18 +250,59 @@ function SvgComponent(props) {
               data-name="Psicolog\xEDa"
               transform="rotate(-5.13 6810.657 -3198.292)"
               fill="#4d4e4e"
-              fontSize={51}
+              fontSize={49}
               fontFamily="Bariol-Bold, Bariol"
               fontWeight={700}
+              transform-origin='50% 0%'
+              text-anchor="middle"
+              
             >
-              <tspan x={-109.038} y={0}>
+              <tspan id='text-center'x={-15} y={-80} 
+              >
                 {nameArray[index]}
+                
               </tspan>
             </text>
             
           </g>
-          
+          <circle className='cirlce'  cx="65" cy="617" r="60"   fill={colors.blue} ></circle>
+          <text
+          onClick={handleClickMinus}
+               data-name="Psicolog\xEDa"
+               transform="rotate(-5.13 6810.657 -3198.292)"
+               fill={colors.withe}
+               fontSize={85}
+               fontFamily="Bariol-Bold, Bariol"
+               fontWeight={700}
+               transform-origin='0% 0%'
+               text-anchor="middle"
+               className='cirlce'
+            >
+              <tspan x={-255} y={20} className='cirlce'>
+              {'<'}
+              </tspan>
+            </text>
+            
+          <circle  className='cirlce'  cx="540" cy="575" r="60"   fill={colors.blue}/>
+          <text
+              onClick={handleClickplus}
+               data-name="Psicolog\xEDa"
+               transform="rotate(-5.13 6810.657 -3198.292)"
+               fill={colors.withe}
+               fontSize={85}
+               fontFamily="Bariol-Bold, Bariol"
+               fontWeight={700}
+               transform-origin='0% 0%'
+               text-anchor="middle"
+               
+            >
+              <tspan x={232} y={20} className='cirlce'>
+              {'>'}
+              </tspan>
+            </text>
+        
         </g>
+        
       </svg>
     </>
   );
