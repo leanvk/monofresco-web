@@ -95,8 +95,8 @@ function SvgComponent(props) {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
-        width={1161.063}
-        height={890.533}
+        width={1500}
+        height={1000}
         viewBox="0 0 1500 1000"
         {...props}
       
@@ -125,6 +125,7 @@ function SvgComponent(props) {
             width={399.925}
             height={399.925}
             transform="rotate(-5.13 861.778 -275.424)"
+            transition=" 0.1s ease-in-out"
             href={imgRight}
             
             
@@ -138,6 +139,7 @@ function SvgComponent(props) {
                 style={{
                   mixBlendMode: "multiply",
                   isolation: "isolate",
+                  transition:" 0.1s ease-in-out",
                 }}
               />
               <g data-name="Group 6">
@@ -185,6 +187,7 @@ function SvgComponent(props) {
                 style={{
                   mixBlendMode: "multiply",
                   isolation: "isolate",
+                  transition:" 0.1s ease-in-out",
                 }}
               />
               <g data-name="Group 6">
@@ -235,6 +238,7 @@ function SvgComponent(props) {
                 style={{
                   mixBlendMode: "multiply",
                   isolation: "isolate",
+                  transition:" 0.1s ease-in-out",
                 }}
               />
               <g data-name="Group 6">

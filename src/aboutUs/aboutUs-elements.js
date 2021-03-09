@@ -1,7 +1,10 @@
+
 import styled from "styled-components";
 import colors from "../colors";
 import { device } from "./../device";
-import Exp from "./../svg/example";
+import { AboutUs } from "./../svg/aboutUs.js";
+import DotStain from "./../svg/dotStain";
+
 
 export const Container = styled.section.attrs((props) => ({
   // height: props.height || "150px",
@@ -14,95 +17,36 @@ export const Container = styled.section.attrs((props) => ({
   justify-content: center;
   align-items: center;
   margin: none;
-  overflow: hidden;
+  overflow: visible;
   background-color: ${colors.bg};
+  padding-left: 3%;
 `;
+
 
 export const Bg = styled.div`
   box-sizing: border-box;
   background-color: ${colors.yellow};
-  width: 60vw;
-    height: 35vh;
+  width: 307px;
+  height: 400px;
   position: relative;
   display: flex;
-  justify-content: flex-end;
+
+  justify-content: center;
   align-items: center;
+  z-index: 2;
+  //margin-left:-32%;
+  padding-top: 7%;
   @media ${device.mobileL} {
-    width: 60vw;
-    height: 75vh;
-  }
-
-`;
-
-export const Cards = styled(Exp)`
-      
-      position: absolute;
-    transform-origin: -50%-50%;
-    top: 6%;
-    left: 15%;
-    transform: scale(.64);
-
-   
-
-    @media ${device.laptop} {
-      top: 70%;
-    left: 29%;
-   
-    transform: scale(.45);
-  }
-  @media ${device.tablet} {
-    top: 95%;
-    left: 49%;
-   
-    transform: scale(.40);
-  }
-  @media ${device.mobileL} {
-    top: 70%;
-    left: 120%;
-    transform: scale(.40);
-  }
-  @media ${device.mobileM} {
-    
-    top: 70%;
-    left: 128%;
-    transform: scale(.40);
   }
 `;
 
 export const TextWrapper = styled.div`
-  background: transparent;
-  //position: absolute;
-
+  position: relative;
   display: flex;
-  flex-direction: column;
+
   justify-content: center;
   align-items: center;
-
-  
-  
-  margin: none;
-  margin-right: 4%;
-
-  @media ${device.laptop} {
-    margin: none;
-    margin-right: 4%;
-    margin-bottom: 0%;
-  }
-  @media ${device.tablet} {
- 
-    margin-right:-10%;
-    margin-bottom: 0%;
-  }
-  @media ${device.mobileL} {
-    margin: none;
-    margin-right:-5%;
-    margin-bottom: 0%;
-  }
-  @media ${device.mobileM} {
-    margin: none;
-    margin-right:-15%;
-    margin-bottom: 0%;
-  }
+  flex-direction: column;
 `;
 
 export const TextHeader = styled.h1`
@@ -110,16 +54,17 @@ export const TextHeader = styled.h1`
   font-weight: 900;
   font-size: 4em;
   line-height: 1.15em;
-  text-align: center;
+  text-align: right;
   color: ${colors.green};
+
   width: 6em;
-  margin: 0em;
+  margin-top: -41%;
 
   @media ${device.laptop} {
-    font-size: 4em;
+  
   }
   @media ${device.tablet} {
-    font-size: 3em;
+    
   }
 
   @media ${device.mobileL} {
@@ -128,19 +73,13 @@ export const TextHeader = styled.h1`
 
 export const Text = styled.p`
   font-family: Montserrat;
-  text-align: center;
+  text-align: right;
   font-size: 1em;
-  width: 10em;
- 
+  width: 16em;
+  line-height: 180%;
   @media ${device.tablet} {
-    font-size: 1em;
   }
   @media ${device.mobileL} {
-    margin-top:90%;
-    text-align:center;
-    align-self:center;
-    
-    font-size: 1.25em;
   }
 `;
 
@@ -159,33 +98,73 @@ export const Button = styled.button`
 
   text-align: center;
   color: ${colors.withe};
-  
+  margin-top: 22%;
   padding: 0.7em;
   transition: 0.09s ease-in-out;
   cursor: pointer;
   transform: scale(1);
 
   @media ${device.laptop} {
-    transform: scale(1);
+    transform: scale(1.1);
+    margin-top: 22%;
   }
   @media ${device.tablet} {
-    transform: scale(0.8);
-    //transform-origin:120%;
+    
   }
 
   @media ${device.mobileL} {
     
-    transform: scale(0.8);
-    //transform-origin:100%;
   }
-  @media ${device.mobileM} {
-    
-    transform: scale(1);
-    //transform-origin:100%;
-  }
+
   &:hover {
     transform: scale(1.03);
     background: ${colors.hoverBlue};
     transition: 0.2s ease-in-out;
+  }
+`;
+
+export const SvgWrapper = styled.div`
+ margin-top: 6px;
+margin-left: 102px;
+transition: 0.5s ease-in-out;
+
+@media ${device.laptop} {
+    transform: scale(0.95);
+opacity:0.0;
+  }
+ 
+`;
+
+
+
+export const AboutUsGyL = styled(AboutUs)`
+`;
+
+export const Dot1 = styled(DotStain)`
+  position: absolute;
+  top: -10%;
+  right: -4%;
+  -webkit-transform: scale(3);
+  -ms-transform: scale(3);
+  transform: scale(5);
+  z-index: 1;
+  opacity: 0.6;
+`;
+
+export const Dot2 = styled(DotStain)`
+  position: absolute;
+  bottom: -9%;
+  left: -5%;
+  transform: scale(5);
+  z-index: -40;
+  opacity: 0.6;
+
+  @media ${device.mobileL} {
+    position: absolute;
+    bottom: -20%;
+    left: -5%;
+    transform: scale(1);
+    z-index: 0;
+    opacity: 0.6;
   }
 `;

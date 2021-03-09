@@ -14,7 +14,8 @@ export const Examples = () => {
   return (
     <Container width="100vw" height="90vh">
       <Bg>
-        <Cards></Cards>
+        <Cards width={1161}
+        height={890}></Cards>
 
         <TextWrapper>
           <TextHeader>Nuestros Modelos</TextHeader>

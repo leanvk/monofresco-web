@@ -1,8 +1,26 @@
 import * as React from "react";
-import styled from 'styled-components';
+import  { useState } from 'react';
 
 
-function SvgComponent(props) {
+
+export function AboutUs(props) {
+  const [guilleOn,setGuilleOn]=useState(false)
+  const handleMouseGuille = ()=>{
+    if(guilleOn){setGuilleOn(false)}else{setGuilleOn(true)}
+  };
+  const [leanOn,setLeanOn]=useState(false)
+  const handleMouseLean = ()=>{
+    if(leanOn){setLeanOn(false)}else{setLeanOn(true)}
+  };
+
+
+
+
+
+  const guilleStyle= guilleOn?'opacity:1;;transition: 0.1s ease-in-out;;':'opacity:0.0;;transition: 0.3s ease-in-out;;'
+
+  const LeanStyle=  leanOn?'opacity:1;;transition: 0.1s ease-in-out;;':'opacity:0.0;;transition: 0.3s ease-in-out;;'
+  
   return (
 
     <div>
@@ -15,11 +33,15 @@ function SvgComponent(props) {
       y={0}
       viewBox="0 0 612 760.69"
       xmlSpace="preserve"
+      //width={600}
+      //height={903}
+      width={300*1.1}
+      height={(903/2)*1.1}
       {...props}
     >
       <style>
         {
-          ".prefix__st0{fill-rule:evenodd;clip-rule:evenodd;fill:#e2e2e2}.prefix__st1{fill:#05351e}.prefix__st1,.prefix__st3,.prefix__st4,.prefix__st5,.prefix__st6,.prefix__st7{fill-rule:evenodd;clip-rule:evenodd}.prefix__st3{fill:none;stroke:#a3a3a2;stroke-width:3.9024;stroke-miterlimit:10}.prefix__st4,.prefix__st5,.prefix__st6,.prefix__st7{fill:#f7b319}.prefix__st5,.prefix__st6,.prefix__st7{fill:#fbc0aa}.prefix__st6,.prefix__st7{fill:#fff}.prefix__st7{clip-path:url(#prefix__SVGID_2_);fill:#081735}.prefix__st8{clip-path:url(#prefix__SVGID_4_)}.prefix__st12,.prefix__st8{fill-rule:evenodd;clip-rule:evenodd;fill:#081735}.prefix__st13{fill:#010101}.prefix__st19,.prefix__st20,.prefix__st23{fill-rule:evenodd;clip-rule:evenodd}.prefix__st19{clip-path:url(#prefix__SVGID_12_);fill:#081735}.prefix__st20,.prefix__st23{fill:#821518}.prefix__st23{fill:#091735}.prefix__st24{fill:none}.prefix__st29{fill:#f7b319}.prefix__st31{fill:#4c3013}.prefix__st34{fill:#05351e}.prefix__st35{fill:#fff}.prefix__st36{font-family:&apos;CoolveticaRg-Regular&apos;}.prefix__st37{font-size:48.285px}.prefix__st38{letter-spacing:1}.prefix__st39{font-family:&apos;GillSansStd-Light&apos;}.prefix__st40{font-size:19.314px}"
+          `.prefix__st0{fill-rule:evenodd;clip-rule:evenodd;fill:#e2e2e2}.prefix__st1{fill:#05351e}.prefix__st1,.prefix__st3,.prefix__st4,.prefix__st5,.prefix__st6,.prefix__st7{fill-rule:evenodd;clip-rule:evenodd}.prefix__st3{fill:none;stroke:#a3a3a2;stroke-width:3.9024;stroke-miterlimit:10}.prefix__st4,.prefix__st5,.prefix__st6,.prefix__st7{fill:#f7b319}.prefix__st5,.prefix__st6,.prefix__st7{fill:#fbc0aa}.prefix__st6,.prefix__st7{fill:#fff}.prefix__st7{clip-path:url(#prefix__SVGID_2_);fill:#081735}.prefix__st8{clip-path:url(#prefix__SVGID_4_)}.prefix__st12,.prefix__st8{fill-rule:evenodd;clip-rule:evenodd;fill:#081735}.prefix__st13{fill:#010101}.prefix__st19,.prefix__st20,.prefix__st23{fill-rule:evenodd;clip-rule:evenodd}.prefix__st19{clip-path:url(#prefix__SVGID_12_);fill:#081735}.prefix__st20,.prefix__st23{fill:#821518}.prefix__st23{fill:#091735}.prefix__st24{fill:none}.prefix__st29{fill:#f7b319}.prefix__st31{fill:#4c3013}.prefix__st34{fill:#05351e}.prefix__st35{fill:#fff}.prefix__st36{font-family:&apos;CoolveticaRg-Regular&apos;}.prefix__st37{font-size:48.285px}.prefix__st38{letter-spacing:1}.prefix__st39{font-family:&apos;GillSansStd-Light&apos;}.prefix__st40{font-size:19.314px}  .prefix__descripcion_guille {${guilleStyle}} .prefix__descripcion_lean{${LeanStyle}}`
         }
       </style>
       <g id="prefix__cortina_inf">
@@ -38,7 +60,7 @@ function SvgComponent(props) {
         <path className="prefix__st3" d="M468.47 169.33v-55.07" />
         <circle className="prefix__st3" cx={468.47} cy={175.86} r={6.54} />
       </g>
-      <g id='lean'>
+      <g onMouseEnter={handleMouseLean} onMouseOut={handleMouseLean}  id='lean'>
         <path className="prefix__st1" d="M347.68 723.25h245.13v21.26H347.68z" />
         <path
           className="prefix__st4"
@@ -206,9 +228,9 @@ function SvgComponent(props) {
           d="M461.16 575.74c-.14.58-.25-.09-.12.48.01.03.04.05.07.07.55.48 1.22.75 1.85 1.05.58.27 1.18.5 1.78.68 2.55.77 5.15.81 7.57.19 2.23-.57 4.35-1.69 6.12-3.47 1.03-1.04 1.92-2.3 2.7-3.77.04-.07.02-.15-.05-.19a.134.134 0 00-.19.05c-.92 1.31-1.96 2.37-3.04 3.28-1.78 1.49-3.74 2.45-5.82 2.88-2.74.57-5.62.13-8.49-1.01-.6-.24-1.18-.56-1.82-.77-.03-.01-.06-.03-.09-.02-.56.17.08-.06-.35.34-.06-.03-.13-.01-.16.04-.04.07-.02.14.04.17zM470.83 583.36l.06-.06c.1-.11.29-.06.42-.1.73-.18 1.39-.55 2.02-.98.68-.47 1.33-.98 1.93-1.48.15-.14.38-.14.52.01.14.15.14.38-.01.52-.75.8-1.56 1.71-2.53 2.31-.63.39-1.32.69-2.07.73-.07 0-.15.04-.2-.01l-.05-.04c.01-.07 0-.18-.03-.34a.106.106 0 01-.12-.1c0-.06.04-.12.11-.13 0-.18-.01-.28-.05-.33z"
         />
       </g>
-      <g id="prefix__guille">
+      <g onMouseEnter={handleMouseGuille} onMouseOut={handleMouseGuille} className="prefix__guille">
         <path className="prefix__st4" d="M13.06.2h214.91v318.06H13.06z" />
-        <path className="prefix__st1" d="M0 317.44h245.13v21.26H0z" />
+        <path className="prefix__st1 " d="M0 317.44h245.13v21.26H0z" />
         <linearGradient
           id="prefix__SVGID_10_"
           gradientUnits="userSpaceOnUse"
@@ -225,7 +247,7 @@ function SvgComponent(props) {
           fill="url(#prefix__SVGID_10_)"
         />
         <path
-          className="prefix__st6"
+          className="prefix__st6 "
           d="M110.61 184.88l7.96 4.6c10.41 4.47 20.76-6.14 28.51-10.32 7.57-4.09 16.48-4.66 24.31-.79 9.56 5.5 25.53 54.84 26.59 59.67-2.68.51-6.29 1.02-8.98 1.46-4.7.77-20.84 4.88-20.84 4.88l-11.13 64.72s-36.06 9.46-58.76 3.98c-5.24-1.27-13.95-67.67-13.95-67.67l-32.18-18.78S78.85 176.77 99.87 181c3.18.53 8.66.7 10.74 3.88z"
         />
         <path
@@ -381,100 +403,132 @@ function SvgComponent(props) {
           />
         </g>
       </g>
-      <g id="prefix__descipcion_guille">
+      <g class="prefix__descripcion_guille">
         <path className="prefix__st34" d="M227.97.85h364.84v338.5H227.97z" />
         <text
           transform="translate(346.514 69.472)"
-          className="prefix__st35 prefix__st36 prefix__st37 prefix__st38"
+          className="prefix__st35 prefix__st36 prefix__st37 prefix__st38 prefix__st34"
         >
           {"Guillermina"}
         </text>
         <path
-          className="prefix__st24"
+          className="prefix__st24 prefix__st34"
           d="M336.02 101.27h233.13V310.9H336.02z"
         />
         <text transform="translate(527.644 114.986)">
-          <tspan x={0} y={0} className="prefix__st35 prefix__st39 prefix__st40">
+          <tspan x={0} y={0} className="prefix__st35 prefix__st39 prefix__st40 prefix__st34">
             {"Hola! "}
           </tspan>
           <tspan
             x={-151.44}
             y={30.8}
-            className="prefix__st35 prefix__st39 prefix__st40"
+            className="prefix__st35 prefix__st39 prefix__st40 prefix__st34"
           >
             {"Desde peque\xF1a soy una "}
           </tspan>
           <tspan
             x={-185.26}
             y={61.59}
-            className="prefix__st35 prefix__st39 prefix__st40"
+            className="prefix__st35 prefix__st39 prefix__st40 prefix__st34"
           >
             {"enamorada de las sorpresas. "}
           </tspan>
           <tspan
             x={-188.12}
             y={92.39}
-            className="prefix__st35 prefix__st39 prefix__st40"
+            className="prefix__st35 prefix__st39 prefix__st40 prefix__st34"
           >
             {"Dise\xF1adora en Monofresco y "}
           </tspan>
           <tspan
             x={-158.2}
             y={123.18}
-            className="prefix__st35 prefix__st39 prefix__st40"
+            className="prefix__st35 prefix__st39 prefix__st40 prefix__st34"
           >
             {"fan\xE1tica de los colores. Si "}
           </tspan>
           <tspan
             x={-176.99}
             y={153.98}
-            className="prefix__st35 prefix__st39 prefix__st40"
+            className="prefix__st35 prefix__st39 prefix__st40 prefix__st34"
           >
             {"queres, me podes decir Gui"}
           </tspan>
           <tspan
             x={-157.08}
             y={184.78}
-            className="prefix__st35 prefix__st39 prefix__st40"
+            className="prefix__st35 prefix__st39 prefix__st40 prefix__st34"
           >
             {"como hacen mis amigos."}
           </tspan>
         </text>
       </g>
-     
+      <g className="prefix__descripcion_lean">
+        <path className="prefix__st34" d="M-.97 405.46h364.84v338.5H-.97z" />
+        <text
+          transform="translate(25.635 471.633)"
+          className="prefix__st35 prefix__st36 prefix__st37 prefix__st38"
+        >
+          {"Leandro"}
+        </text>
+        <path className="prefix__st24" d="M27.49 505.88h254.08v216.16H27.49z" />
+        <text transform="translate(27.489 519.595)">
+          <tspan x={0} y={0} className="prefix__st35 prefix__st39 prefix__st40">
+            {"Hola! "}
+          </tspan>
+          <tspan
+            x={0}
+            y={30.8}
+            className="prefix__st35 prefix__st39 prefix__st40"
+          >
+            {"Siempre que tengo una idea, la "}
+          </tspan>
+          <tspan
+            x={0}
+            y={61.59}
+            className="prefix__st35 prefix__st39 prefix__st40"
+          >
+            {"motivaci\xF3n para concretarla "}
+          </tspan>
+          <tspan
+            x={0}
+            y={92.39}
+            className="prefix__st35 prefix__st39 prefix__st40"
+          >
+            {"nunca falta. Ahora es el "}
+          </tspan>
+          <tspan
+            x={0}
+            y={123.18}
+            className="prefix__st35 prefix__st39 prefix__st40"
+          >
+            {"momento de realizar la tuya!. "}
+          </tspan>
+          <tspan
+            x={0}
+            y={153.98}
+            className="prefix__st35 prefix__st39 prefix__st40"
+          >
+            {"Podes decirme Lean. "}
+          </tspan>
+          <tspan
+            x={0}
+            y={184.78}
+            className="prefix__st35 prefix__st39 prefix__st40"
+          >
+            {"Nos vemos en tu dise\xF1o!"}
+          </tspan>
+        </text>
+      </g>
     </svg>
     </div>
   )
 }
 
-function NotSvg(params) {
-
-  return(
-    <div>
-    <SvgComponent/>
-    <div id='descripcionLean'>
-        <h4>Leandro</h4>
-        <p>Hola!<br></br>Siempre que tengo una idea, la motivación para concretarla nunca falta.  Ahora es el momento de realizar la tuya!. Podes decirme Lean. Nos vemos en tu diseño!</p>
-    </div>
-    </div>
-  )
-  
-}
-
-
-
-export const AboutUs = styled(NotSvg)`
-
-#descripcionLean{
-  background-color:pink;
-}
 
 
 
 
 
-`;
-
-export default AboutUs
 
 
