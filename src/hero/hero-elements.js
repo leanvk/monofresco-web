@@ -228,16 +228,16 @@ export const HeroWrapper = styled(hero)`
     z-index:99;
 
 
-    #Component_2_1{
+    
       transition: 0.5s ease-in-out;
-      transform-origin: -400% center;
+     
       &:hover {
     transform: scale(1.05);
 
-  
+
     transition: 0.2s ease-in-out;
   }
-    }
+    
 
     @media ${device.mobileL} {
      // transform: scale(1.65);

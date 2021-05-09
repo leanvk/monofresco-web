@@ -12,6 +12,9 @@ export const Container = styled.section.attrs((props) => ({
 }))`
   height: ${(props) => props.height};
   width: ${(props) => props.width};
+ 
+  margin-top: 5%;
+  margin-bottom:5%;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -20,8 +23,28 @@ export const Container = styled.section.attrs((props) => ({
   overflow: visible;
   background-color: ${colors.bg};
   padding-left: 3%;
+
+
+
 `;
 
+export const MainWrapper = styled.div`
+ transform: scale(1.2);
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  @media ${device.laptop} {
+    transform: scale(.99);
+
+  }
+  @media ${device.tablet} {
+    transform: scale(.8);
+
+  }
+  @media ${device.mobileL} {
+   flex-direction:column; 
+  }
+`
 
 export const Bg = styled.div`
   box-sizing: border-box;
@@ -37,6 +60,12 @@ export const Bg = styled.div`
   //margin-left:-32%;
   padding-top: 7%;
   @media ${device.mobileL} {
+ 
+
+    width: 450px;
+height: 275px;
+
+
   }
 `;
 
@@ -68,6 +97,9 @@ export const TextHeader = styled.h1`
   }
 
   @media ${device.mobileL} {
+    font-size: 4em;
+    text-align: left;
+    margin-top: -20%;
   }
 `;
 
@@ -80,6 +112,9 @@ export const Text = styled.p`
   @media ${device.tablet} {
   }
   @media ${device.mobileL} {
+    text-align: left;
+    align-self: flex-start;
+    margin-top:-10%;
   }
 `;
 
@@ -113,6 +148,8 @@ export const Button = styled.button`
   }
 
   @media ${device.mobileL} {
+    margin-top: 0%;
+
     
   }
 
@@ -126,11 +163,10 @@ export const Button = styled.button`
 export const SvgWrapper = styled.div`
  margin-top: 6px;
 margin-left: 102px;
-transition: 0.5s ease-in-out;
 
-@media ${device.laptop} {
-    transform: scale(0.95);
-opacity:0.0;
+@media ${device.mobileL} {
+  margin-left:0;
+
   }
  
 `;

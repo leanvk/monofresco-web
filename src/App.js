@@ -6,6 +6,7 @@ import Hero from './hero/hero.js';
 import FormSection from './form/form.js';
 import Examples from './examples/examples.js';
 import AboutUsSection  from './aboutUs/aboutUs';
+import { Container } from './Container.js';
 
 
 
@@ -13,6 +14,7 @@ function App() {
 
   return (
     <>
+      <Container>
       <Header></Header>
       <Hero></Hero>
       <AboutUsSection></AboutUsSection>
@@ -20,7 +22,7 @@ function App() {
       <FormSection></FormSection>
       
       <Footer></Footer>
-
+      </Container>
     </>
   );
 }

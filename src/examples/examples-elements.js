@@ -9,6 +9,7 @@ export const Container = styled.section.attrs((props) => ({
 }))`
   height: ${(props) => props.height};
   width: ${(props) => props.width};
+  transform: scale(${(props) =>props.scale});
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -17,6 +18,13 @@ export const Container = styled.section.attrs((props) => ({
   overflow: hidden;
   background-color: ${colors.bg};
 `;
+
+export const MainWrapper = styled.div`
+ transform: scale(${(props) =>props.scale});
+ display: flex;
+  justify-content: center;
+  align-items: center;
+`
 
 export const Bg = styled.div`
   box-sizing: border-box;

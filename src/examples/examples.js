@@ -7,12 +7,14 @@ import {
   TextHeader,
   Button,
   Text,
+  MainWrapper,
 } from "./examples-elements";
 
 
 export const Examples = () => {
   return (
-    <Container width="100vw" height="90vh">
+    <Container width="100vw" height="90vh" >
+      <MainWrapper scale="1.2">
       <Bg>
         <Cards width={1161}
         height={890}></Cards>
@@ -25,6 +27,7 @@ export const Examples = () => {
           <Button>Encarga el tuyo!</Button>
         </TextWrapper>
       </Bg>
+      </MainWrapper>
     </Container>
   );
 };

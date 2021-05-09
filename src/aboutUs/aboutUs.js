@@ -11,6 +11,7 @@ import {
   SvgWrapper,
   AboutUsGyL,
   TextWrapper,
+  MainWrapper,
 
 } from "./aboutUs-elements";
 
@@ -21,7 +22,8 @@ function AboutUsSection() {
 
   return (
     <>
-      <Container width="100%">
+      <Container width="100vw" height="90vh" >
+        <MainWrapper>
         <Bg >
           <TextWrapper>
             <TextHeader>Somos Gui y Lean</TextHeader>
@@ -42,7 +44,9 @@ function AboutUsSection() {
         <SvgWrapper>
           <AboutUsGyL></AboutUsGyL>
         </SvgWrapper>
+        </MainWrapper>
       </Container>
+
     </>
   );
 }
